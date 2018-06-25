@@ -95,13 +95,13 @@ var ruff = dog.bark();
 let array = [1,2,3,5,100,1000,6];
 
 function looper(array){
- var mySum = 0 
+ var mySum = 0; 
  for (var i=0;i<array.length;i++){
    if (array[i]%2===1 || array[i]>=100){
-    return mySum += array[i];
+    mySum += array[i];
    }
  }
- return mySum
+ return mySum;
 };
 
 
@@ -183,13 +183,13 @@ let pondScope = ["duck", "realDuck"];
 //function which returns your name.
 
 
-function anonymous(){
-  return "Danielle";
+function outerFn(){
+  return function(){
+    return "Danielle";
+  };
 }
 
-function outerFn(anonymous){
-return anonymous();
-};
+
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 var innerFn = outerFn();
